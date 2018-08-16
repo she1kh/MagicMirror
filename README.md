@@ -1,8 +1,31 @@
 # MagicMirror
 
-This is a Magic mirror written in Node and where we get Date & Time, Weather, Busstiming (Malmö, Sweden), Todo-list, RSS- flow (Sydsvenskan) and a text in the middle
+
+Add your own keys in 'assets/key-temp.js' (Rename it to keys.js)
+
+Current work:
+Outlook calendar
+the UI details
 
 
-The text in the middle is changeable and so is the wehaterlocation and you are able to add todos.
+This mirror currently shows:
+Date
+Time
+Weather 
+A todo list
+A text in the middle
+RSS flow
+Busstiming to my busstop | node-skanetrafiken npm to find out more
 
-I use mLab MongoDB as the db and Openweather for the weather. 
+To be added:
+Calender
+On/off trigger with a distance control sensor
+
+Future planning:
+Voice 
+Smart home integration
+Face recognition 
+
+
+https://ibb.co/iiaoAp
+
