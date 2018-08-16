@@ -1,0 +1,84 @@
+<% include partial/header.ejs %>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script src="/assets/script.js"></script> 
+
+    <script>
+        if (annyang) {
+          // Let's define a command.
+          var commands = {
+            'What time is it': function() { responsiveVoice.speak('Its time for Disco!'); }
+          
+        };
+          // Add our commands to annyang
+          annyang.addCommands(commands);
+         
+          annyang.addCallback('result', (phrases) => {
+                  console.log(phrases);
+          });
+          // Start listening.
+          annyang.start();
+        }
+        </script> 
+</head>
+<body>
+        <div class="grid-container">
+                <div class="grid-left" id="top">
+                    <h2 id="date">1 Jan 1970</h2> <h2 id="time">--:--</h2>
+                    <h4>kalender</h4>
+                    <h6>idag</h6>
+                    <h6>imorgon</h6>
+                    <h6>dagen efter imorgon</h6>
+
+                </div>
+
+                <div class="grid-mid" id="top"></div>
+
+                <div class="grid-right" id="top">
+                        <div class="weather-right" id="weather-top">   
+  
+                                <div>
+                                        <img id="img" src="/assets/temp.png" width="100"></img>
+                                </div>                         
+                                <div class="temp-div">
+                                        <h4 id="weather">-city-</h4>
+                                        <p id="temp">-temp-</p>  
+                                        <p id="desc">-desc-</p>  
+                                </div>
+                        </div>
+                        
+                        <ul id="weather-forecast">
+
+                        </ul>
+          
+                </div>  
+
+                
+
+                <div class="grid-left" id="mid"></div>
+
+                <div class="grid-mid" id="mid">
+                        <h1 id="moto">--</h1>
+                </div>
+
+                <div class="grid-right" id="mid"></div> 
+
+                <div class="grid-left" id="bot">
+                        <h2>Mina To Do´s</h2>
+                        <ul id="item"></ul>
+                </div>
+
+                <div class="grid-mid" id="bot"></div>
+
+                <div class="grid-right" id="bot">
+                        <h2>Resetider</h2>
+                        <ul id="busstider"></ul> 
+                </div>  
+              </div>
+              <div id="footer">
+              <p id="text">test</p>
+              </div>
+</body>
+</html>

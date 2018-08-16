@@ -1,0 +1,27 @@
+<% include partial/header.ejs %>
+<link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/assets/config-helper.js"></script>
+
+</head>
+<body>
+<h1 id="header" > Config</h1>
+    <div id="todo-table">
+        <div>
+            <h4>City</h4>
+            <input id="city-input" type="text" name="city" placeholder="City name" required />
+            <input id="click-city" type="button" value="Set City" onclick="setCity();" />
+        </div>
+        <div>
+            <h4>Daily Moto</h4>
+            <input id="moto-input" type="text" name="moto" placeholder="Daily moto" required />
+            <input id="click-moto" type="button" value="Set Moto" onclick="setMoto();" />
+        </div>
+        <div>
+            <h4>Todo</h4>
+            <input id="todo-input" type="text" name="todo" placeholder="Todo" required />
+            <input id="click-todo" type="button" value="Set Todo" onclick="setTodo();" />
+        </div>
+        <h2 id="msg">---</h2>
+    </div>
+    </body>
+</html>
